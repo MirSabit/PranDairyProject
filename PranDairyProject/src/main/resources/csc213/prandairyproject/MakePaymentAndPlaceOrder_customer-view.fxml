@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="253.0" prefWidth="383.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc213.prandairyproject.MakePaymentAndPlaceOrder_customer-viewController">
+   <children>
+      <Text layoutX="168.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment" />
+      <Text layoutX="30.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Methodt" />
+      <Text layoutX="30.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile number For Bkash and  Nagad " />
+      <TextField layoutX="30.0" layoutY="148.0" prefHeight="25.0" prefWidth="325.0" />
+      <ComboBox layoutX="25.0" layoutY="89.0" prefHeight="25.0" prefWidth="325.0" promptText="Cash on Delivery" />
+      <Button layoutX="105.0" layoutY="187.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="165.0" text="Pay Now" />
+   </children>
+</AnchorPane>

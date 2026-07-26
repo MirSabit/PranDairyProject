@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="349.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <Text layoutX="264.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order History" />
+      <TableView layoutX="26.0" layoutY="77.0" prefHeight="200.0" prefWidth="545.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Order ID" />
+          <TableColumn prefWidth="75.0" text="Date" />
+            <TableColumn prefWidth="108.0" text="Product" />
+            <TableColumn prefWidth="101.33331298828125" text="Total" />
+            <TableColumn prefWidth="63.3333740234375" text="Payment" />
+            <TableColumn prefWidth="120.00002034505212" text="Delivery" />
+        </columns>
+      </TableView>
+      <Button layoutX="336.0" layoutY="295.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="See Order Detail And Download Invoice" />
+   </children>
+</AnchorPane>

@@ -1,4 +1,4 @@
-package com.example.prandairyproject;
+package csc213.prandairyproject;
 
 import javafx.application.Application;
 
