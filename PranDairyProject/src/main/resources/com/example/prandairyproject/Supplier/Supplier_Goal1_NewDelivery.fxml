@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- User-6, Goal-1: New Delivery Submission -->
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@../css/style.css" prefWidth="900" prefHeight="650">
+    <top>
+        <HBox alignment="CENTER_LEFT" styleClass="header-bar" spacing="12">
+            <Button fx:id="btnBack" text="&lt; Dashboard" styleClass="btn-secondary"/>
+            <Label text="New Delivery Submission" styleClass="header-title"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="16" style="-fx-padding:20;">
+            <VBox styleClass="form-card" spacing="10">
+                <Label text="Your Account Details" styleClass="section-title"/>
+                <GridPane hgap="14" vgap="6">
+                    <Label text="Supplier ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <Label fx:id="lblSupplierId" text="-" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                    <Label text="Registered Name:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                    <Label fx:id="lblRegisteredName" text="-" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+                    <Label text="Contract Terms:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <Label fx:id="lblContractTerms" text="-" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                    <Label text="Approved Price/Litre:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                    <Label fx:id="lblApprovedPrice" text="-" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+                </GridPane>
+                <Label fx:id="lblSuspended" style="-fx-text-fill:#C0392B;"/>
+            </VBox>
+
+            <VBox styleClass="form-card" spacing="10">
+                <Label text="Delivery Information" styleClass="section-title"/>
+                <GridPane hgap="14" vgap="10">
+                    <Label text="Quantity (litres)" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtQuantity" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                    <Label text="Delivery Date" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                    <DatePicker fx:id="dpDeliveryDate" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+                    <Label text="Vehicle / Driver ID" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtVehicleDriverId" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                </GridPane>
+                <Label fx:id="lblValidation" style="-fx-text-fill:#C0392B;"/>
+            </VBox>
+
+            <HBox spacing="12">
+                <Button fx:id="btnReviewSubmit" text="Confirm &amp; Submit Delivery" styleClass="btn-primary"/>
+            </HBox>
+            <Label fx:id="lblConfirmation" styleClass="status-label" wrapText="true"/>
+        </VBox>
+    </center>
+</BorderPane>

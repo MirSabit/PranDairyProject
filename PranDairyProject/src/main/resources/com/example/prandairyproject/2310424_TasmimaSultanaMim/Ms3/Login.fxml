@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Process-1: Login (shared by all 8 users) -->
+<StackPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+           stylesheets="@../css/style.css" prefWidth="900" prefHeight="600">
+    <VBox alignment="CENTER" spacing="18" maxWidth="380" styleClass="form-card">
+        <Label text="PRAN DAIRY" styleClass="header-title" style="-fx-text-fill:#0B5E3C;-fx-font-size:26px;"/>
+        <Label text="Management System - Login" styleClass="section-title"/>
+
+        <VBox spacing="6">
+            <Label text="User ID (4 or 7 digits)"/>
+            <TextField fx:id="txtUserId" promptText="Enter your User ID"/>
+        </VBox>
+
+        <VBox spacing="6">
+            <Label text="Password"/>
+            <PasswordField fx:id="txtPassword" promptText="Enter your password"/>
+        </VBox>
+
+        <Label fx:id="lblLoginError" text="" style="-fx-text-fill:#C0392B;" wrapText="true"/>
+
+        <Button fx:id="btnLogin" text="Login" styleClass="btn-primary" maxWidth="Infinity"/>
+    </VBox>
+</StackPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<!-- User-5, Goal-3: Quality Inspection Report -->
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@../css/style.css" prefWidth="1000" prefHeight="700">
+    <top>
+        <HBox alignment="CENTER_LEFT" styleClass="header-bar" spacing="12">
+            <Button fx:id="btnBack" text="&lt; Dashboard" styleClass="btn-secondary"/>
+            <Label text="Quality Inspection Report" styleClass="header-title"/>
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true">
+            <VBox spacing="16" style="-fx-padding:20;">
+                <VBox styleClass="form-card" spacing="10">
+                    <Label text="Report Parameters" styleClass="section-title"/>
+                    <HBox spacing="12" alignment="CENTER_LEFT">
+                        <Label text="Report Type"/>
+                        <ComboBox fx:id="cmbReportType">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Raw Milk"/>
+                                    <String fx:value="Finished Product"/>
+                                    <String fx:value="Full Report"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <Label text="Period"/>
+                        <ComboBox fx:id="cmbReportPeriod">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Weekly"/>
+                                    <String fx:value="Monthly"/>
+                                    <String fx:value="Custom"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <Label text="From"/>
+                        <DatePicker fx:id="dpFrom"/>
+                        <Label text="To"/>
+                        <DatePicker fx:id="dpTo"/>
+                        <Button fx:id="btnGenerate" text="Generate Report" styleClass="btn-primary"/>
+                    </HBox>
+                    <Label fx:id="lblValidation" style="-fx-text-fill:#C0392B;"/>
+                </VBox>
+
+                <HBox spacing="16">
+                    <VBox styleClass="form-card" spacing="8" HBox.hgrow="ALWAYS">
+                        <Label text="Summary Statistics" styleClass="section-title"/>
+                        <GridPane hgap="14" vgap="8">
+                            <Label text="Total Inspected:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                            <Label fx:id="lblTotalInspected" text="-" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                            <Label text="Total Approved:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                            <Label fx:id="lblTotalApproved" text="-" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                            <Label text="Total Rejected:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                            <Label fx:id="lblTotalRejected" text="-" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                            <Label text="Approval Rate:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                            <Label fx:id="lblApprovalRate" text="-" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                            <Label text="Avg Fat %:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                            <Label fx:id="lblAvgFat" text="-" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+                            <Label text="Avg pH:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                            <Label fx:id="lblAvgPh" text="-" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+                        </GridPane>
+                    </VBox>
+                    <VBox styleClass="form-card" spacing="8">
+                        <Label text="Rejection Causes" styleClass="section-title"/>
+                        <PieChart fx:id="chartRejectionCauses" legendVisible="true" prefWidth="280" prefHeight="220"/>
+                    </VBox>
+                </HBox>
+
+                <HBox spacing="12">
+                    <Button fx:id="btnExportPdf" text="Export as PDF" styleClass="btn-primary"/>
+                    <Button fx:id="btnExportExcel" text="Export as Excel" styleClass="btn-secondary"/>
+                </HBox>
+                <Label fx:id="lblNoRecords" styleClass="status-label"/>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>
