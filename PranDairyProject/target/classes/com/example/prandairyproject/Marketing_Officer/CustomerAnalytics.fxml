@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="635.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prandairyproject.Marketing_Officer.CustomerAnalyticsController">
+   <children>
+      <Label layoutX="159.0" layoutY="14.0" text="  Customer Analytics">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="91.0" text="Customer Type " />
+      <Label layoutX="49.0" layoutY="135.0" text="Start Date" />
+      <Label layoutX="51.0" layoutY="180.0" text="End Date" />
+      <Label layoutX="51.0" layoutY="230.0" text="Report Type " />
+      <ComboBox fx:id="customerTypeComboBox" layoutX="150.0" layoutY="87.0" prefWidth="150.0" promptText="customerTypeComboBox" />
+      <ComboBox fx:id="reportTypeComboBox" layoutX="119.0" layoutY="226.0" prefWidth="150.0" promptText="reportTypeComboBox" />
+      <DatePicker fx:id="startDatePicker" layoutX="121.0" layoutY="131.0" />
+      <DatePicker fx:id="endDatePicker" layoutX="121.0" layoutY="176.0" />
+      <Button fx:id="generateButton" layoutX="50.0" layoutY="283.0" mnemonicParsing="false" onAction="#onGenerateButtonClick" text="Generate Report" />
+      <Button fx:id="exportButton" layoutX="168.0" layoutY="283.0" mnemonicParsing="false" onAction="#onExportButtonClick" prefHeight="25.0" prefWidth="114.0" text="Export" />
+      <Button fx:id="backButton" layoutX="312.0" layoutY="283.0" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="25.0" prefWidth="114.0" text="Back" />
+      <TableView fx:id="analyticsTableView" layoutX="78.0" layoutY="364.0" prefHeight="200.0" prefWidth="444.0">
+        <columns>
+          <TableColumn fx:id="customerIdColumn" prefWidth="104.0" text=" Customer ID" />
+          <TableColumn fx:id="customerNameColumn" prefWidth="63.0" text=" Name " />
+            <TableColumn fx:id="purchaseColumn" text="Purchases" />
+            <TableColumn fx:id="spentColumn" prefWidth="95.0" text=" Total Spent" />
+            <TableColumn fx:id="statusColumn" prefWidth="95.0" text=" Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

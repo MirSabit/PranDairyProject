@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0"
+            prefWidth="1100.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.prandairyproject.Accountant.FinancialReportsController">
+
+    <children>
+
+        <!-- Title -->
+        <Label layoutX="410.0" layoutY="20.0" text="Financial Reports">
+            <font>
+                <Font size="26.0"/>
+            </font>
+        </Label>
+
+        <!-- Left Control Panel -->
+        <VBox layoutX="40.0"
+              layoutY="70.0"
+              prefWidth="300.0"
+              spacing="15.0">
+
+            <padding>
+                <Insets top="10.0" right="10.0" bottom="10.0" left="10.0"/>
+            </padding>
+
+            <!-- Report Type -->
+            <Label text="Report Type"/>
+
+            <ComboBox fx:id="reportTypeComboBox"
+                      prefWidth="250.0"
+                      promptText="Select Report Type"/>
+
+            <!-- Period -->
+            <Label text="Period"/>
+
+            <ComboBox fx:id="periodComboBox"
+                      prefWidth="250.0"
+                      promptText="Select Period"/>
+
+            <!-- Generate Report Button -->
+            <Button text="Generate Report"
+                    prefWidth="160.0"
+                    onAction="#onGenerateButtonClick"/>
+
+        </VBox>
+
+        <!-- Report Table -->
+        <TableView fx:id="financialReportTableView"
+                   layoutX="360.0"
+                   layoutY="70.0"
+                   prefHeight="520.0"
+                   prefWidth="710.0">
+
+            <columns>
+
+                <TableColumn fx:id="reportTypeColumn"
+                             text="Report Type"
+                             prefWidth="120.0"/>
+
+                <TableColumn fx:id="periodColumn"
+                             text="Period"
+                             prefWidth="100.0"/>
+
+                <TableColumn fx:id="revenueColumn"
+                             text="Revenue"
+                             prefWidth="100.0"/>
+
+                <TableColumn fx:id="expensesColumn"
+                             text="Expenses"
+                             prefWidth="100.0"/>
+
+                <TableColumn fx:id="grossProfitColumn"
+                             text="Gross Profit"
+                             prefWidth="110.0"/>
+
+                <TableColumn fx:id="netProfitColumn"
+                             text="Net Profit"
+                             prefWidth="100.0"/>
+
+                <TableColumn fx:id="profitMarginColumn"
+                             text="Profit Margin %"
+                             prefWidth="120.0"/>
+
+            </columns>
+
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+
+        </TableView>
+
+        <!-- Bottom Buttons -->
+        <HBox layoutX="360.0"
+              layoutY="620.0"
+              spacing="20.0">
+
+            <Button text="Export PDF"
+                    prefWidth="130.0"
+                    onAction="#onExportPdfButtonClick"/>
+
+            <Button text="Export Excel"
+                    prefWidth="130.0"
+                    onAction="#onExportExcelButtonClick"/>
+
+            <Button text="Clear"
+                    prefWidth="100.0"
+                    onAction="#onClearButtonClick"/>
+
+            <Button text="Back"
+                    prefWidth="100.0"
+                    onAction="#onBackButtonClick"/>
+
+        </HBox>
+
+    </children>
+
+</AnchorPane>
