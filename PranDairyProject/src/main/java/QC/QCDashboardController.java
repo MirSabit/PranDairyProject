@@ -4,11 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-/**
- * Controller for QC_Dashboard.fxml.
- * Auto-generated MS4 scaffold: fields are wired to fx:id nodes from the FXML;
- * business logic inside each handler is left as TODO for the model/service layer.
- */
+
 public class QCDashboardController {
 
     @FXML private Label lblWelcome;
@@ -24,7 +20,6 @@ public class QCDashboardController {
 
     @FXML
     private void initialize() {
-        // TODO: populate ComboBox/TableView items from model classes, set initial state
     }
 
     @FXML

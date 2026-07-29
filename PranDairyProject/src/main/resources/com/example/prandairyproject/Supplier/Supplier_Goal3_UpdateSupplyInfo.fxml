@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.geometry.Insets?>
+
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<!-- User-6, Goal-3: Update Supply Information -->
 <BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
             stylesheets="@../css/style.css" prefWidth="900" prefHeight="650">
     <top>

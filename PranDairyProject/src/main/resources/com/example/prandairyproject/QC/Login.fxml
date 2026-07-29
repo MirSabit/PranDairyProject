@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<!-- Process-1: Login (shared by all 8 users) -->
+
 
 <StackPane prefHeight="600" prefWidth="900" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
     <VBox alignment="CENTER" maxWidth="380" spacing="18" styleClass="form-card">
