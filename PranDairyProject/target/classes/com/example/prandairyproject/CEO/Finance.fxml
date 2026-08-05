@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CEO.finance">
+   <children>
+      <Text layoutX="64.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year " />
+      <DatePicker layoutX="90.0" layoutY="43.0" />
+      <TableView layoutX="77.0" layoutY="146.0" prefHeight="200.0" prefWidth="487.0">
+        <columns>
+          <TableColumn prefWidth="105.33334350585938" text="Quater 1 " />
+          <TableColumn prefWidth="128.0" text="Quater 2 " />
+            <TableColumn prefWidth="134.66668701171875" text="Quater 3" />
+            <TableColumn prefWidth="120.0" text="Quater 4" />
+        </columns>
+      </TableView>
+      <Button layoutX="415.0" layoutY="56.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="103.0" text="Show data" />
+   </children>
+</AnchorPane>

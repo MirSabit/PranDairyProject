@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CEO.weeklysalesgrowth">
+   <children>
+      <TableView layoutX="1.0" layoutY="200.0" prefHeight="200.0" prefWidth="600.0">
+        <columns>
+          <TableColumn prefWidth="119.99999737739563" text="Previous Week" />
+          <TableColumn prefWidth="148.66667938232422" text="Current Week" />
+            <TableColumn prefWidth="148.66667938232422" text="Estimated " />
+            <TableColumn prefWidth="180.00003051757812" text="Sales Growth" />
+        </columns>
+      </TableView>
+      <Button layoutX="460.0" layoutY="47.0" mnemonicParsing="false" prefHeight="132.0" prefWidth="121.0" text="Show Report" />
+   </children>
+</AnchorPane>
