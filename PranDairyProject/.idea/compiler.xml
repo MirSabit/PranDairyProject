@@ -9,5 +9,8 @@
         <module name="PranDairyProject" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="PranDairyProject (1)" target="9" />
+    </bytecodeTargetLevel>
   </component>
 </project>

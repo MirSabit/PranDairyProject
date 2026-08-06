@@ -10,12 +10,16 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CEO.complaints">
    <children>
+      <Text layoutX="20.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complaint Resolution Summary" />
       <Text layoutX="49.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complaint ID" />
-      <TextField layoutX="132.0" layoutY="51.0" />
-      <Button layoutX="313.0" layoutY="51.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="191.0" text="Load Complaints" />
-      <TableView layoutX="49.0" layoutY="111.0" prefHeight="200.0" prefWidth="477.0">
+      <TextField fx:id="complaintIdField" layoutX="132.0" layoutY="51.0" />
+      <Button fx:id="loadComplaintsButton" layoutX="313.0" layoutY="51.0" mnemonicParsing="false" onAction="#loadComplaints" prefHeight="25.0" prefWidth="191.0" text="Load Complaints" />
+      <Button fx:id="backButton" layoutX="20.0" layoutY="10.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="140.0" text="Back to Dashboard" />
+      <TableView fx:id="complaintsTable" layoutX="49.0" layoutY="111.0" prefHeight="200.0" prefWidth="500.0">
         <columns>
-          <TableColumn prefWidth="475.99998982747394" text="Show Complaint" />
+          <TableColumn fx:id="reportIdColumn" prefWidth="140.0" text="Report ID" />
+          <TableColumn fx:id="totalComplaintsColumn" prefWidth="160.0" text="Total Complaints" />
+          <TableColumn fx:id="resolvedComplaintsColumn" prefWidth="198.0" text="Resolved Complaints" />
         </columns>
       </TableView>
    </children>

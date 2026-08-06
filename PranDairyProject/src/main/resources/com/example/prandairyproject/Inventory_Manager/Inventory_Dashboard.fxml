@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" spacing="25.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Inventory_Manager.inventory_dashboard">
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Manager Dashboard">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <GridPane alignment="CENTER" hgap="15.0" vgap="15.0">
+         <children>
+            <Button fx:id="productButton" onAction="#openProduct" prefHeight="55.0" prefWidth="230.0" text="Add Product" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Button fx:id="inventoryButton" onAction="#openInventory" prefHeight="55.0" prefWidth="230.0" text="Inventory / Stock" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Button fx:id="minimumStockButton" onAction="#openMinimumStock" prefHeight="55.0" prefWidth="230.0" text="Minimum Stock" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Button fx:id="inventoryLogButton" onAction="#openInventoryLog" prefHeight="55.0" prefWidth="230.0" text="Inventory Log" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="customerOrderButton" onAction="#openCustomerOrder" prefHeight="55.0" prefWidth="230.0" text="Customer Orders" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Button fx:id="returnOrderButton" onAction="#openReturnOrder" prefHeight="55.0" prefWidth="230.0" text="Return Orders" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="salesReportButton" onAction="#openSalesReport" prefHeight="55.0" prefWidth="230.0" text="Sales Reports" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogout" prefHeight="30.0" prefWidth="120.0" text="Logout" />
+   </children>
+</VBox>

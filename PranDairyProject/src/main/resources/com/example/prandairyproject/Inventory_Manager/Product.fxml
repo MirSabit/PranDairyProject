@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Inventory_Manager.product">
+<AnchorPane prefHeight="480.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Inventory_Manager.product">
    <children>
       <Text layoutX="45.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product ID" />
-      <TextField layoutX="120.0" layoutY="54.0" />
+      <TextField fx:id="productIdField" layoutX="120.0" layoutY="54.0" />
       <Text layoutX="33.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name " />
-      <TextField layoutX="120.0" layoutY="90.0" />
+      <TextField fx:id="productNameField" layoutX="120.0" layoutY="90.0" />
       <Text layoutX="47.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category " />
-      <TextField layoutX="120.0" layoutY="126.0" />
+      <TextField fx:id="categoryField" layoutX="120.0" layoutY="126.0" />
       <Text layoutX="41.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description " />
-      <TextField layoutX="120.0" layoutY="162.0" prefHeight="116.0" prefWidth="149.0" />
-      <Button layoutX="367.0" layoutY="45.0" mnemonicParsing="false" prefHeight="238.0" prefWidth="134.0" text="Add New Product" />
+      <TextField fx:id="descriptionField" layoutX="120.0" layoutY="162.0" prefHeight="116.0" prefWidth="149.0" />
+      <Button fx:id="addProductButton" layoutX="367.0" layoutY="45.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="115.0" prefWidth="134.0" text="Add New Product" />
+      <Button fx:id="backButton" layoutX="367.0" layoutY="168.0" mnemonicParsing="false" onAction="#goBack" prefHeight="60.0" prefWidth="134.0" text="Back to Dashboard" wrapText="true" />
+      <TableView fx:id="productTable" layoutX="30.0" layoutY="300.0" prefHeight="160.0" prefWidth="540.0">
+        <columns>
+          <TableColumn fx:id="productIdColumn" prefWidth="100.0" text="Product ID" />
+          <TableColumn fx:id="productNameColumn" prefWidth="140.0" text="Product Name" />
+          <TableColumn fx:id="categoryColumn" prefWidth="120.0" text="Category" />
+          <TableColumn fx:id="descriptionColumn" prefWidth="180.0" text="Description" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

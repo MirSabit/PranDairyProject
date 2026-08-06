@@ -10,16 +10,17 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Inventory_Manager.customer_order">
    <children>
-      <TableView layoutX="15.0" layoutY="170.0" prefHeight="200.0" prefWidth="570.0">
+      <TableView fx:id="orderTable" layoutX="15.0" layoutY="170.0" prefHeight="200.0" prefWidth="570.0">
         <columns>
-          <TableColumn prefWidth="88.0" text="Customer ID" />
-          <TableColumn prefWidth="114.66665649414062" text="Customer Name" />
-            <TableColumn prefWidth="105.33331298828125" text="Product Name" />
-            <TableColumn prefWidth="103.33331298828125" text="Product ID" />
-            <TableColumn prefWidth="158.0" text="Total" />
+          <TableColumn fx:id="customerIdColumn" prefWidth="88.0" text="Customer ID" />
+          <TableColumn fx:id="customerNameColumn" prefWidth="114.66665649414062" text="Customer Name" />
+            <TableColumn fx:id="productNameColumn" prefWidth="105.33331298828125" text="Product Name" />
+            <TableColumn fx:id="productIdColumn" prefWidth="103.33331298828125" text="Product ID" />
+            <TableColumn fx:id="totalColumn" prefWidth="158.0" text="Total" />
         </columns>
       </TableView>
       <Button fx:id="showorder" layoutX="383.0" layoutY="94.0" mnemonicParsing="false" onAction="#displayorders" prefHeight="57.0" prefWidth="181.0" text="Show on going orders" />
+      <Button fx:id="backButton" layoutX="30.0" layoutY="105.0" mnemonicParsing="false" onAction="#goBack" prefHeight="35.0" prefWidth="140.0" text="Back to Dashboard" />
       <Text layoutX="186.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Order" textAlignment="CENTER" wrappingWidth="227.33333333333348">
          <font>
             <Font size="29.0" />
