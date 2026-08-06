@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="409.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="QualityControlOfficer.hygieneinspection">
+    <Text layoutX="20.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hygiene Inspection">
+        <font>
+          <Font size="20.0"/>
+        </font>
+    </Text>
+    <Text layoutX="20.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Area"/>
+    <TextField fx:id="areaField" layoutX="180.0" layoutY="60.0" prefWidth="200.0"/>
+    <Text layoutX="20.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compliance Score (%)"/>
+    <TextField fx:id="complianceScoreField" layoutX="180.0" layoutY="92.0" prefWidth="200.0"/>
+    <Text layoutX="20.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status"/>
+    <RadioButton fx:id="resultAField" layoutX="180.0" layoutY="124.0" mnemonicParsing="false" selected="true"
+                 text="Compliant"/>
+    <RadioButton fx:id="resultBField" layoutX="300.0" layoutY="124.0" mnemonicParsing="false" text="Non-Compliant"/>
+    <Button fx:id="addButton" layoutX="20.0" layoutY="164.0" mnemonicParsing="false" onAction="#addRecord"
+            prefHeight="30.0" prefWidth="360.0" text="Add"/>
+    <TableView fx:id="recordTable" layoutX="20.0" layoutY="209.0" prefHeight="180.0" prefWidth="320.0">
+      <columns>
+          <TableColumn fx:id="areaColumn" prefWidth="100.0" text="Area"/>
+          <TableColumn fx:id="complianceScoreColumn" prefWidth="100.0" text="Score"/>
+          <TableColumn fx:id="resultColumn" prefWidth="100.0" text="Status"/>
+      </columns>
+    </TableView>
+    <Button fx:id="backButton" layoutX="250.0" layoutY="15.0" mnemonicParsing="false" onAction="#goBack"
+            prefHeight="25.0" prefWidth="150.0" text="Back to Dashboard"/>
+</AnchorPane>

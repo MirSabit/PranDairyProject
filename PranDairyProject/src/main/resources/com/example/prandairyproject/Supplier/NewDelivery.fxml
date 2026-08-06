@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="441.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Supplier.newdelivery">
+   <children>
+      <Text layoutX="20.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Delivery">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="20.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery ID" />
+      <TextField fx:id="deliveryIdField" layoutX="180.0" layoutY="60.0" prefWidth="200.0" />
+      <Text layoutX="20.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity (L)" />
+      <TextField fx:id="quantityField" layoutX="180.0" layoutY="92.0" prefWidth="200.0" />
+      <Text layoutX="20.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Date" />
+      <TextField fx:id="deliveryDateField" layoutX="180.0" layoutY="124.0" prefWidth="200.0" />
+      <Text layoutX="20.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle/Driver ID" />
+      <TextField fx:id="vehicleDriverIdField" layoutX="180.0" layoutY="156.0" prefWidth="200.0" />
+      <Button fx:id="addButton" layoutX="20.0" layoutY="196.0" mnemonicParsing="false" onAction="#addRecord" prefHeight="30.0" prefWidth="360.0" text="Add" />
+      <TableView fx:id="recordTable" layoutX="20.0" layoutY="241.0" prefHeight="180.0" prefWidth="420.0">
+        <columns>
+          <TableColumn fx:id="deliveryIdColumn" prefWidth="100.0" text="Delivery ID" />
+          <TableColumn fx:id="quantityColumn" prefWidth="100.0" text="Quantity" />
+          <TableColumn fx:id="deliveryDateColumn" prefWidth="100.0" text="Date" />
+          <TableColumn fx:id="vehicleDriverIdColumn" prefWidth="100.0" text="Vehicle/Driver" />
+        </columns>
+      </TableView>
+      <Button fx:id="backButton" layoutX="290.0" layoutY="15.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="150.0" text="Back to Dashboard" />
+   </children>
+</AnchorPane>
