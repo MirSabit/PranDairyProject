@@ -19,13 +19,10 @@ public class SceneManager {
         primaryStage = stage;
     }
 
-    /**
-     * Loads the given FXML (path is relative to the com.example.prandairyproject
-     * resources folder, e.g. "CEO/CEODashboard.fxml") and shows it on the
-     * primary stage.
-     */
     public static void switchScene(String fxmlPath, String title) {
         try {
+
+
             FXMLLoader loader = new FXMLLoader(SceneManager.class.getResource(fxmlPath));
             Parent root = loader.load();
             Scene scene = new Scene(root);
