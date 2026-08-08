@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="505.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="QualityControlOfficer.inspectrawmilk">
+   <children>
+      <Text layoutX="20.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inspect Raw Milk">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="20.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Batch ID" />
+      <TextField fx:id="batchIdField" layoutX="180.0" layoutY="60.0" prefWidth="200.0" />
+      <Text layoutX="20.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier Name" />
+      <TextField fx:id="supplierNameField" layoutX="180.0" layoutY="92.0" prefWidth="200.0" />
+      <Text layoutX="20.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity (L)" />
+      <TextField fx:id="quantityField" layoutX="180.0" layoutY="124.0" prefWidth="200.0" />
+      <Text layoutX="20.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fat %" />
+      <TextField fx:id="fatPercentField" layoutX="180.0" layoutY="156.0" prefWidth="200.0" />
+      <Text layoutX="20.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pH Level" />
+      <TextField fx:id="phLevelField" layoutX="180.0" layoutY="188.0" prefWidth="200.0" />
+      <Text layoutX="20.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result" />
+      <RadioButton fx:id="resultAField" layoutX="180.0" layoutY="220.0" mnemonicParsing="false" selected="true" text="Approved" />
+      <RadioButton fx:id="resultBField" layoutX="300.0" layoutY="220.0" mnemonicParsing="false" text="Rejected" />
+      <Button fx:id="addButton" layoutX="20.0" layoutY="260.0" mnemonicParsing="false" onAction="#addRecord" prefHeight="30.0" prefWidth="360.0" text="Add" />
+      <TableView fx:id="recordTable" layoutX="20.0" layoutY="305.0" prefHeight="180.0" prefWidth="620.0">
+        <columns>
+          <TableColumn fx:id="batchIdColumn" prefWidth="100.0" text="Batch ID" />
+          <TableColumn fx:id="supplierNameColumn" prefWidth="100.0" text="Supplier" />
+          <TableColumn fx:id="quantityColumn" prefWidth="100.0" text="Quantity" />
+          <TableColumn fx:id="fatPercentColumn" prefWidth="100.0" text="Fat %" />
+          <TableColumn fx:id="phLevelColumn" prefWidth="100.0" text="pH" />
+          <TableColumn fx:id="resultColumn" prefWidth="100.0" text="Result" />
+        </columns>
+      </TableView>
+      <Button fx:id="backButton" layoutX="490.0" layoutY="15.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="150.0" text="Back to Dashboard" />
+   </children>
+</AnchorPane>
