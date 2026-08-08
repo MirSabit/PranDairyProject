@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="676.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prandairyproject.Marketing_Officer.LoyaltyProgramController">
+   <children>
+      <Label layoutX="123.0" layoutY="14.0" text="Loyalty Program Management">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="100.0" text="Program Name" />
+      <Label layoutX="53.0" layoutY="147.0" text="Program Type" />
+      <Label layoutX="53.0" layoutY="187.0" text="Discount (%)" />
+      <Label layoutX="53.0" layoutY="236.0" text="Minimum Points" />
+      <Label layoutX="53.0" layoutY="286.0" text="Expiry Date" />
+      <Label layoutX="53.0" layoutY="327.0" text="Description" />
+      <TextField fx:id="programNameTextField" layoutX="141.0" layoutY="96.0" />
+      <ComboBox fx:id="programTypeComboBox" layoutX="140.0" layoutY="143.0" prefWidth="150.0" />
+      <TextField fx:id="discountTextField" layoutX="141.0" layoutY="183.0" />
+      <TextField fx:id="pointsTextField" layoutX="151.0" layoutY="232.0" />
+      <DatePicker fx:id="expiryDatePicker" layoutX="141.0" layoutY="282.0" prefHeight="25.0" prefWidth="150.0" />
+      <TextArea fx:id="descriptionTextArea" layoutX="126.0" layoutY="315.0" prefHeight="109.0" prefWidth="200.0" />
+      <Button fx:id="saveButton" layoutX="83.0" layoutY="441.0" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="25.0" prefWidth="103.0" text="Save" />
+      <Button fx:id="clearButton" layoutX="216.0" layoutY="441.0" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="25.0" prefWidth="103.0" text="Clear" />
+      <Button fx:id="backButton" layoutX="342.0" layoutY="441.0" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="25.0" prefWidth="103.0" text="Back" />
+      <TableView fx:id="loyaltyTableView" layoutX="94.0" layoutY="485.0" prefHeight="160.0" prefWidth="450.0">
+        <columns>
+          <TableColumn fx:id="programIdColumn" prefWidth="75.0" text="Program ID" />
+          <TableColumn fx:id="programNameColumn" prefWidth="101.0" text="Program Name" />
+            <TableColumn fx:id="programTypeColumn" prefWidth="90.0" text="Program Type" />
+            <TableColumn fx:id="discountColumn" prefWidth="90.0" text="Discount" />
+            <TableColumn fx:id="pointsColumn" prefWidth="90.0" text="Points" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

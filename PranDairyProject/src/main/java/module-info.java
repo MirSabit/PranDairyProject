@@ -1,8 +1,14 @@
-module csc213.prandairyproject {
+module com.example.prandairyproject {
+
     requires javafx.controls;
     requires javafx.fxml;
 
+    opens com.example.prandairyproject to javafx.fxml;
+    exports com.example.prandairyproject;
 
-    opens csc213.prandairyproject to javafx.fxml;
-    exports csc213.prandairyproject;
+    opens com.example.prandairyproject.Marketing_Officer to javafx.fxml;
+    exports com.example.prandairyproject.Marketing_Officer;
+
+    opens com.example.prandairyproject.Accountant to javafx.fxml;
+    exports com.example.prandairyproject.Accountant;
 }
