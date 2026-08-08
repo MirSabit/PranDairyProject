@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Inventory_Manager.minimum_stock">
+   <children>
+      <Text layoutX="42.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product ID" />
+      <TextField fx:id="checkProductIdField" layoutX="107.0" layoutY="41.0" />
+      <Button fx:id="checkMinStockButton" layoutX="397.0" layoutY="42.0" mnemonicParsing="false" onAction="#checkMinimumStock" prefHeight="25.0" prefWidth="171.0" text="Check Min. Stock" />
+      <Text layoutX="52.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product ID" />
+      <TextField fx:id="changeProductIdField" layoutX="115.0" layoutY="227.0" />
+      <Text layoutX="32.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" />
+      <TextField fx:id="changeProductNameField" layoutX="115.0" layoutY="266.0" />
+      <Text layoutX="34.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Min. Stock" />
+      <TextField fx:id="setMinStockField" layoutX="115.0" layoutY="306.0" />
+      <TableView fx:id="stockTable" layoutX="52.0" layoutY="95.0" prefHeight="84.0" prefWidth="489.0">
+        <columns>
+          <TableColumn fx:id="stockColumn" prefWidth="487.99998982747394" text="Show stock " />
+        </columns>
+      </TableView>
+      <Button fx:id="changeMinStockButton" layoutX="350.0" layoutY="226.0" mnemonicParsing="false" onAction="#changeMinimumStock" prefHeight="80.0" prefWidth="171.0" text="Change Min. Stock" />
+      <Button fx:id="backButton" layoutX="350.0" layoutY="306.0" mnemonicParsing="false" onAction="#goBack" prefHeight="29.0" prefWidth="171.0" text="Back to Dashboard" />
+   </children>
+</AnchorPane>

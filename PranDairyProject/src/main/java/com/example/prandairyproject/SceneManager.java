@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
 public class SceneManager {
 
     private static Stage primaryStage;
@@ -20,6 +21,8 @@ public class SceneManager {
 
     public static void switchScene(String fxmlPath, String title) {
         try {
+
+
             FXMLLoader loader = new FXMLLoader(SceneManager.class.getResource(fxmlPath));
             Parent root = loader.load();
             Scene scene = new Scene(root);

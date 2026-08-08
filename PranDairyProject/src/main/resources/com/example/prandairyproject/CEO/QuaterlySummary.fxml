@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CEO.quaterlysummary">
+   <children>
+      <Text layoutX="20.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quaterly Profit/Loss Summary" />
+      <Text layoutX="20.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by period" />
+      <TextField fx:id="periodFilterField" layoutX="130.0" layoutY="47.0" promptText="e.g. Q1 2026" />
+      <Button fx:id="filterButton" layoutX="300.0" layoutY="47.0" mnemonicParsing="false" onAction="#filterByPeriod" prefHeight="25.0" prefWidth="90.0" text="Filter" />
+      <Button fx:id="showAllButton" layoutX="400.0" layoutY="47.0" mnemonicParsing="false" onAction="#showAll" prefHeight="25.0" prefWidth="90.0" text="Show All" />
+      <TableView fx:id="summaryTable" layoutX="20.0" layoutY="90.0" prefHeight="260.0" prefWidth="565.0">
+        <columns>
+          <TableColumn fx:id="periodColumn" prefWidth="140.0" text="Period" />
+          <TableColumn fx:id="totalSalesColumn" prefWidth="140.0" text="Total Sales" />
+            <TableColumn fx:id="totalCostColumn" prefWidth="140.0" text="Total Cost" />
+            <TableColumn fx:id="profitColumn" prefWidth="145.0" text="Profit" />
+        </columns>
+      </TableView>
+      <Button fx:id="backButton" layoutX="20.0" layoutY="360.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="140.0" text="Back to Dashboard" />
+   </children>
+</AnchorPane>

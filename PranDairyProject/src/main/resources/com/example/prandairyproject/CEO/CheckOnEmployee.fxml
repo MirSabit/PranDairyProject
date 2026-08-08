@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CEO.checkonemployee">
+   <children>
+      <Text layoutX="40.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee ID" wrappingWidth="71.47003173828125" />
+      <TextField fx:id="employeeIdField" layoutX="129.0" layoutY="39.0" />
+      <Text layoutX="30.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Name" wrappingWidth="91.47003173828125" />
+      <TextField fx:id="employeeNameField" layoutX="129.0" layoutY="78.0" />
+      <Text layoutX="57.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position" wrappingWidth="71.47003173828125" />
+      <TextField fx:id="positionField" layoutX="129.0" layoutY="125.0" />
+      <Text layoutX="57.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department" wrappingWidth="71.47003173828125" />
+      <TextField fx:id="departmentField" layoutX="129.0" layoutY="164.0" />
+      <TableView fx:id="employeeTable" layoutX="43.0" layoutY="221.0" prefHeight="149.0" prefWidth="523.0">
+        <columns>
+          <TableColumn fx:id="employeeIdColumn" prefWidth="98.66665649414062" text="Employee ID" />
+          <TableColumn fx:id="employeeNameColumn" prefWidth="78.0" text="Name" />
+            <TableColumn fx:id="positionColumn" prefWidth="86.6666259765625" text="Position" />
+            <TableColumn fx:id="departmentColumn" prefWidth="130.0" text="Department" />
+            <TableColumn fx:id="statusColumn" prefWidth="128.66664632161462" text="Status" />
+        </columns>
+      </TableView>
+      <Button fx:id="loadInfoButton" layoutX="441.0" layoutY="39.0" mnemonicParsing="false" onAction="#loadEmployeeInfo" prefHeight="80.0" prefWidth="107.0" text="Load Info" />
+      <Button fx:id="backButton" layoutX="441.0" layoutY="128.0" mnemonicParsing="false" onAction="#goBack" prefHeight="60.0" prefWidth="107.0" text="Back to Dashboard" wrapText="true" />
+   </children>
+</AnchorPane>

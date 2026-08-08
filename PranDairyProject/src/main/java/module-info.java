@@ -2,45 +2,44 @@ module com.example.prandairyproject {
     requires javafx.controls;
     requires javafx.fxml;
 
+    // UI packages - opened to javafx.fxml for @FXML field/method injection,
+    // and to javafx.base for TableView's PropertyValueFactory reflection.
     opens com.example.prandairyproject to javafx.fxml, javafx.base;
-    opens QualityControlOfficer to javafx.fxml, javafx.base;
-    opens Supplier to javafx.fxml, javafx.base;
+    opens CEO to javafx.fxml, javafx.base;
+    opens Inventory_Manager to javafx.fxml, javafx.base;
 
     exports com.example.prandairyproject;
-    exports QualityControlOfficer;
-    exports Supplier;
+    exports CEO;
+    exports Inventory_Manager;
 
-    opens RawMilkInspection to javafx.base;
-    opens ProductQualityCheck to javafx.base;
-    opens QualityReport to javafx.base;
-    opens ComplaintInvestigation to javafx.base;
-    opens ExpiryCheck to javafx.base;
-    opens SampleEvaluation to javafx.base;
-    opens HygieneInspection to javafx.base;
-    opens LabRecord to javafx.base;
-    opens Delivery to javafx.base;
-    opens PaymentRecord to javafx.base;
-    opens SupplyInfo to javafx.base;
-    opens DeliveryHistory to javafx.base;
-    opens BatchRegistration to javafx.base;
-    opens DeliverySchedule to javafx.base;
-    opens FeedbackResponse to javafx.base;
-    opens PerformanceReport to javafx.base;
+    // Shared data packages (models + repositories) - not loaded by
+    // FXMLLoader directly, but their getters are read reflectively by
+    // TableView's PropertyValueFactory, so they need to be opened too.
+    opens SalesReport to javafx.base;
+    opens FinancialReport to javafx.base;
+    opens ProfitLossSummary to javafx.base;
+    opens ProductionTarget to javafx.base;
+    opens ApproveSupplier to javafx.base;
+    opens Employee to javafx.base;
+    opens ComplaintReport to javafx.base;
+    opens Product to javafx.base;
+    opens Inventory to javafx.base;
+    opens InventoryLog to javafx.base;
+    opens MinimumStock to javafx.base;
+    opens CustomerOrder to javafx.base;
+    opens ReturnOrder to javafx.base;
 
-    exports RawMilkInspection;
-    exports ProductQualityCheck;
-    exports QualityReport;
-    exports ComplaintInvestigation;
-    exports ExpiryCheck;
-    exports SampleEvaluation;
-    exports HygieneInspection;
-    exports LabRecord;
-    exports Delivery;
-    exports PaymentRecord;
-    exports SupplyInfo;
-    exports DeliveryHistory;
-    exports BatchRegistration;
-    exports DeliverySchedule;
-    exports FeedbackResponse;
-    exports PerformanceReport;
+    exports SalesReport;
+    exports FinancialReport;
+    exports ProfitLossSummary;
+    exports ProductionTarget;
+    exports ApproveSupplier;
+    exports Employee;
+    exports ComplaintReport;
+    exports Product;
+    exports Inventory;
+    exports InventoryLog;
+    exports MinimumStock;
+    exports CustomerOrder;
+    exports ReturnOrder;
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CEO.weeklysalesgrowth">
+   <children>
+      <Text layoutX="20.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weekly Sales Growth" />
+      <TableView fx:id="salesGrowthTable" layoutX="20.0" layoutY="90.0" prefHeight="270.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="reportIdColumn" prefWidth="70.0" text="Report ID" />
+          <TableColumn fx:id="timeColumn" prefWidth="130.0" text="Time" />
+            <TableColumn fx:id="categoryColumn" prefWidth="130.0" text="Category" />
+            <TableColumn fx:id="totalSalesColumn" prefWidth="115.0" text="Total Sales" />
+            <TableColumn fx:id="growthRateColumn" prefWidth="115.0" text="Growth Rate" />
+        </columns>
+      </TableView>
+      <Button fx:id="refreshButton" layoutX="440.0" layoutY="50.0" mnemonicParsing="false" onAction="#refresh" prefHeight="25.0" prefWidth="140.0" text="Refresh" />
+      <Button fx:id="backButton" layoutX="20.0" layoutY="50.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="140.0" text="Back to Dashboard" />
+   </children>
+</AnchorPane>

@@ -2,54 +2,29 @@ package com.example.prandairyproject;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class HelloApplication extends Application {
-
     @Override
     public void start(Stage stage) throws IOException {
+        // SceneManager needs the primary stage before anything else loads,
+        // so every controller's SceneManager.switchScene(...) call works.
+        SceneManager.setPrimaryStage(stage);
 
-        FXMLLoader fxmlLoader = new FXMLLoader(
-                HelloApplication.class.getResource("hello-view.fxml")
-        );
+        // TODO: point this at your team's real login FXML once it's merged
+        // in, e.g. new FXMLLoader(HelloApplication.class.getResource("YourPackage/YourLogin.fxml"))
+        // Loading the CEO dashboard directly for now so the app has
+        // somewhere to start.
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CEO/CEODashboard.fxml"));
+        Parent root = fxmlLoader.load();
 
-        Scene scene = new Scene(fxmlLoader.load(), 1100, 720);
-
-        stage.setTitle("PRAN Dairy Management System");
-
-        // Application Icon (Optional)
-        try {
-            stage.getIcons().add(
-                    new Image(
-                            HelloApplication.class.getResourceAsStream(
-                                    "/com/example/prandairyproject/images/pran_logo.png"
-                            )
-                    )
-            );
-        } catch (Exception e) {
-            System.out.println("Application icon not found.");
-        }
-
+        Scene scene = new Scene(root);
+        stage.setTitle("Pran Dairy");
         stage.setScene(scene);
-
-        stage.setResizable(false);
-
-        stage.centerOnScreen();
-
         stage.show();
-
-    }
-
-    @Override
-    public void stop() {
-        System.out.println("Application Closed.");
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }
