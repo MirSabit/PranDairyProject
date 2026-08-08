@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="427.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc213.prandairyproject.GeneratePerformanceReport_CSM-viewController">
+   <children>
+      <Text layoutX="248.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generate Report">
+         <font>
+            <Font name="Bodoni MT" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="56.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report type" />
+      <ComboBox layoutX="56.0" layoutY="97.0" prefHeight="25.0" prefWidth="222.0" promptText="Complaint Summary" />
+      <Text layoutX="322.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report period" />
+      <ComboBox layoutX="322.0" layoutY="98.0" prefHeight="25.0" prefWidth="222.0" promptText="Daily" />
+      <Text layoutX="56.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From date, for custom range" />
+      <DatePicker layoutX="56.0" layoutY="161.0" prefHeight="25.0" prefWidth="222.0" />
+      <Text layoutX="322.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To date, for custom range" />
+      <DatePicker layoutX="322.0" layoutY="160.0" prefHeight="25.0" prefWidth="222.0" />
+      <Button layoutX="242.0" layoutY="211.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Generate" />
+      <Label layoutX="56.0" layoutY="282.0" text="Average resolution time" />
+      <Label layoutX="56.0" layoutY="310.0" text="Satisfaction score" />
+      <Label layoutX="56.0" layoutY="335.0" text="Top complaint category" />
+      <Button layoutX="325.0" layoutY="376.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="143.0" text="Export as Excel" />
+      <Button layoutX="108.0" layoutY="376.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="143.0" text="Export as PDF" />
+      <Label layoutX="459.0" layoutY="283.0" text="18.4 hours" />
+      <Label layoutX="459.0" layoutY="311.0" text="4.2 out of 5" />
+      <Label layoutX="459.0" layoutY="336.0" text="Delivery" />
+   </children>
+</AnchorPane>

@@ -1,4 +1,4 @@
-package com.example.prandairyproject;
+package csc213.prandairyproject;
 
 public class Launcher {
 
